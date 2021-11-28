@@ -4,15 +4,15 @@
 使用之編譯平台：< Ubuntu 18.04 Visual Studio Code >
 
 各檔案說明：
-	main   			: 主程式執行檔
-	main.cpp		: 主程式 source code
-	readme.md 	: 本檔案
-	12.in			  : 測試檔案 1
-	500.in			: 測試檔案 2
-	5000.in			: 測試檔案 3
-	12.out			: 結果輸出 1
-	500.out			: 結果輸出 2
-	5000.out		: 結果輸出 3	
+	main   			: 主程式執行檔 <br>
+	main.cpp		: 主程式 source code <br>
+	readme.md 		: 本檔案 <br>
+	12.in			: 測試檔案 1 <br>
+	500.in			: 測試檔案 2 <br>
+	5000.in			: 測試檔案 3 <br>
+	12.out			: 結果輸出 1 <br>
+	500.out			: 結果輸出 2 <br>
+	5000.out		: 結果輸出 3 <br>
   
 compile 方式說明：
   於同目錄下指令 : g++ -o main main.cpp 即可產生 main 執行檔

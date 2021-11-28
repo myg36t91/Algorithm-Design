@@ -24,4 +24,7 @@ compile 方式說明： <br>
   ./main [input file name] [output file name] <br>
 
   ex: ./main 12.in 12.out <br>
-
+  
+---
+主程式 main.cpp 中的 case 邏輯 <br>
+![case](https://user-images.githubusercontent.com/45507258/143745839-5e21bac2-1435-40f9-bbce-5430988f1c4c.png)

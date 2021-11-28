@@ -7,7 +7,7 @@
 using namespace std;
 
 vector<vector<int> > m; // store MIS recursive result
-vector<vector<bool> > b; // record if-else have chord
+vector<vector<bool> > b; // record if-else have chord and look up table
 
 int MIS(vector<int>&R, int i, int j){ // vecotr R mean range in i(start) for j(end)
 
@@ -84,21 +84,20 @@ int main(int argc, char *argv[]){
     // open the input file
     fstream fin;
     fin.open(argv[1], fstream::in);
-    if(!fin.is_open())
-    {
+    if(!fin.is_open()){
         cout << "Error: the input file is not opened!!" << endl;
         exit(1);
     }
 
+    // open the output file
     fstream fout;
     fout.open(argv[2],fstream::out);
-    if(!fout.is_open())
-    {
+    if(!fout.is_open()){
         cout << "Error: the output file is not opened!!" << endl;
 	    exit(1);
     }
 
-    // parse the input file
+    // 解析輸入的檔案
     char buffer[100];
     fin >> buffer;
     int numChord = atoi(buffer);
@@ -107,19 +106,19 @@ int main(int argc, char *argv[]){
     cout << "   Parser # Chords: " << numChord << endl;
     cout << "============================" << endl;
 
-    vector<int> row_m;
+    vector<int> row_m; // 建立 1D array
     vector<bool> row_b;
-    row_m.assign(numChord, 0); 
+    row_m.assign(numChord, 0);  // array 的大小根據 numChord 決定
     row_b.assign(numChord , 0);
-    m.assign(numChord, row_m);
+    m.assign(numChord, row_m); // 建立出 numChord x numChord 大小的 2D array 
     b.assign(numChord, row_b);
     
     vector<int> data(numChord);
     for(int i = 0; i < numChord/2; i++){
     	fin >> buffer;
-    	int point1 = atoi(buffer);
+    	int point1 = atoi(buffer); // range start
     	fin >> buffer;
-    	int point2 = atoi(buffer);
+    	int point2 = atoi(buffer); // range end
     	cout << "Chord(" << point1 << "," << point2 << ")" << endl;
         data[point1] = point2;
         data[point2] = point1;

@@ -1,6 +1,6 @@
 # Algorithm Design
 
-## 1 maximum-planar-subset
+### Maximum-Planar-Subset
 
 使用之程式語言：< C++ > <br>
 使用之編譯平台：< Ubuntu 18.04 Visual Studio Code > <br>
